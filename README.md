@@ -1,1 +1,2 @@
-Step 1: clone repo Step 2: "npm install"
+Step 1: clone repo 
+Step 2: "npm install"
