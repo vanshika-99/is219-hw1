@@ -1,57 +1,47 @@
-const Addition = require('./Operations/Addition');
-const Division = require('./Operations/Division');
-const Multiplication = require('./Operations/Multiplication');
-const Square = require('./Operations/Square');
+const Calculation = require('./Models/Calculation');
+const Sum = require('./Operations/Sum');
+const Difference = require('./Operations/Difference');
+const Product = require('./Operations/Product');
+const Quotient = require('./Operations/Quotient');
 const SquareRoot = require('./Operations/SquareRoot');
-const Subtraction = require('./Operations/Subtraction');
-const Calculation = require("./models/Calculation");
+const Square = require('./Operations/Square');
 
 class Calculator {
-
     static Calculations = [];
-    //static methods can be called wo instantiating and good for actions
-    static Addition(a, b) {
-        //this is how you create a new object and good for data and actions
-        let calculation = new Calculation(a, b, Addition);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+
+    static Sum(a,b) {
+        let calculation = Calculation.Create(a,b,Sum);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
-    static Subtraction(a, b) {
-        //this is how you create a new object and good for data and actions
-        let calculation = new Calculation(a, b, Subtraction);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+    static Difference(a,b) {
+        let calculation = Calculation.Create(a,b,Difference);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
-    static Multiplication(a, b) {
-        //this is how you create a new object and good for data and actions
-        let calculation = new Calculation(a, b, Multiplication);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+    static Product(a,b) {
+        let calculation = Calculation.Create(a,b,Product);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
-    static Division(a, b) {
-        //this is how you create a new object and good for data and actions
-        let calculation = new Calculation(a,b, Division);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+    static Quotient(a,b) {
+        let calculation = Calculation.Create(a,b,Quotient);
+        this.addCalculation(calculation);
+        return calculation;
     }
-
-    static Square(a) {
-        //this is how you create a new object and good for data and actions
-        let calculation = new Calculation(a, Square);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+    static SquareRoot(a,b) {
+        let calculation = Calculation.Create(a,b,SquareRoot);
+        this.addCalculation(calculation);
+        return calculation;
     }
-
-    static SquareRoot(a) {
-        //this is how you create a new object and good for data and actions
-        let calculation = new Calculation(a, SquareRoot);
-        Calculator.Calculations.push(calculation);
-        return calculation.GetResults();
+    static Square(a,b) {
+        let calculation = Calculation.Create(a,b,Square);
+        this.addCalculation(calculation);
+        return calculation;
     }
 
 }
-
 module.exports = Calculator;
