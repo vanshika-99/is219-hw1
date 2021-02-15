@@ -4,8 +4,9 @@ class Calculation {
         this.b = b;
         this.op = op;
     }
+
     //Factory function: single responsibility
-    static Create(a,b,op){
+    static Create(a, b, op){
         return new Calculation(a,b,op);
     }
 
