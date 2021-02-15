@@ -9,31 +9,31 @@ const Square = require('./operations/Square');
 class Calculator {
     static Calculations = [];
 
-    static Sum(a,b) {
-        let calculation = Calculation.Create(a,b,Sum);
+    static Sum(a, b) {
+        let calculation = Calculation.Create(a, b, Sum);
         return calculation;
     }
 
-    static Difference(a,b) {
-        let calculation = Calculation.Create(a,b,Difference);
+    static Difference(a, b) {
+        let calculation = Calculation.Create(a, b, Difference);
         return calculation;
     }
 
-    static Product(a,b) {
-        let calculation = Calculation.Create(a,b,Product);
+    static Product(a, b) {
+        let calculation = Calculation.Create(a, b, Product);
         return calculation;
     }
 
-    static Quotient(a,b) {
-        let calculation = Calculation.Create(a,b,Quotient);
+    static Quotient(a, b) {
+        let calculation = Calculation.Create(a, b, Quotient);
         return calculation;
     }
-    static SquareRoot(a,b) {
-        let calculation = Calculation.Create(a,b,SquareRoot);
+    static SquareRoot(a, b) {
+        let calculation = Calculation.Create(a, b, SquareRoot);
         return calculation;
     }
-    static Square(a,b) {
-        let calculation = Calculation.Create(a,b,Square);
+    static Square(a, b) {
+        let calculation = Calculation.Create(a, b, Square);
         return calculation;
     }
 

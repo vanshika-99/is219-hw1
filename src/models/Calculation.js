@@ -7,7 +7,7 @@ class Calculation {
 
     //Factory function: single responsibility
     static Create(a, b, op){
-        return new Calculation(a,b,op);
+        return new Calculation(a, b, op);
     }
 
     GetResults() {
